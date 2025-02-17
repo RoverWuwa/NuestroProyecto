@@ -2,7 +2,8 @@ h1 {
     text-align: center; /* Centrar el titulo*/
 }
 
-body { /* Estilo del body */
+body {
+    position: relative; /* Posición relativa para el pseudo-elemento */
     background-image: url(images/background1.jpg); /* Imagen de fondo */
     background-repeat: no-repeat; /* No repetir la imagen */
     background-size: cover; /* Cubrir todo el body */
@@ -10,7 +11,18 @@ body { /* Estilo del body */
     background-position: center; /* Centrar la imagen */
 }
 
-.header-container { /* Estilo del header (agrupa los elementos determinados y los encierra */
+body::before {
+    content: ""; /* Contenido vacío */
+    position: absolute; /* Posición absoluta */
+    top: 0; /* Arriba */
+    left: 0; /* Izquierda */
+    width: 100%; /* Ancho */
+    height: 100%; /* Alto */
+    background-color: rgba(0, 0, 0, 0.16); /* Color negro con 70% de opacidad */
+    z-index: -1; /* Capa inferior. Asegura que el pseudo-elemento se coloque detrás del contenido del body */
+}
+
+.header-container { /* Estilo del header */
     background-color: #333; /* Color de fondo */
     color: white; /* Color de la letra */
     width: 100%; /* Ancho del header */
@@ -26,9 +38,10 @@ body { /* Estilo del body */
     padding: 0; /* Quitar el padding */
     margin: 0; /* Quitar el margin */
 }
+
 footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
+    background-color: #333; /* Color de fondo */
+    color: #fff; /* Color de la letra */
+    padding: 20px 0; /* Espaciado */
+    text-align: center; /* Centrar el texto */
 }
