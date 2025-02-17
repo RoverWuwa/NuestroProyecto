@@ -26,3 +26,9 @@ body { /* Estilo del body */
     padding: 0; /* Quitar el padding */
     margin: 0; /* Quitar el margin */
 }
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
