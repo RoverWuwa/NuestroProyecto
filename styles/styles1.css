@@ -1,9 +1,26 @@
 h1 {
-    text-align: center;
+    text-align: center; /* Centrar el titulo*/
 }
-ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+
+body { /* Estilo del body */
+    background-image: url(images/background1.jpg); /* Imagen de fondo */
+    background-repeat: no-repeat; /* No repetir la imagen */
+    background-size: cover; /* Cubrir todo el body */
+}
+
+.header-container { /* Estilo del header (agrupa los elementos determinados y los encierra */
+    background-color: #333; /* Color de fondo */
+    color: white; /* Color de la letra */
+    width: 100%; /* Ancho del header */
+    padding: 20px 0; /* Espaciado del header */
+    text-align: center; /* Centrar el texto */
+}
+
+.header-container ul { /* Estilo de la lista del header */
+    list-style-type: none; /* Quitar los puntos de la lista */
+    display: flex; /* Mostrar los elementos en fila horizontal */
+    justify-content: center; /* Centrar los elementos */
+    gap: 20px; /* Espaciado entre los elementos */
+    padding: 0; /* Quitar el padding */
+    margin: 0; /* Quitar el margin */
 }
