@@ -6,6 +6,8 @@ body { /* Estilo del body */
     background-image: url(images/background1.jpg); /* Imagen de fondo */
     background-repeat: no-repeat; /* No repetir la imagen */
     background-size: cover; /* Cubrir todo el body */
+    background-attachment: fixed; /* Fijar la imagen */
+    background-position: center; /* Centrar la imagen */
 }
 
 .header-container { /* Estilo del header (agrupa los elementos determinados y los encierra */
