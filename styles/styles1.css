@@ -42,18 +42,31 @@ body::before {
     font-size: 1.4vw; /* Agrandar la letra del 1.4% de la pantalla*/
 }
 
-.welcome-message { 
+.welcome-message {/* Estilo del mensaje de bienvenida */
+    display: flex; /* Usar flexbox para el diseño */
+    align-items: center; /* Alinear los elementos al centro verticalmente */
+}
+
+.welcome-text {
+    flex: 1;
     color: #f0f8ff; /* Color de letra más suave */
     background-color: #333; /* Color de fondo oscuro */
-    padding: 20px; /* Espaciado interno */
-    margin: 20px auto; /* Espaciado externo, centrado horizontalmente */
-    width: 80%; /* Ancho del contenedor */
+    padding: 10px; /* Espaciado interno */
+    margin: 20px 45px; /* Espaciado externo, centrado horizontalmente */
+    width: 37%; /* Ancho del contenedor */
     text-align: left; /* Alinear el texto a la izquierda */
-    border-radius: 10px; /* Bordes redondeados */
+    border-radius: 15px; /* Bordes redondeados */
     font-family: Arial, sans-serif; /* Fuente legible */
     line-height: 1.6; /* Altura de línea para mejor legibilidad */
     font-weight: bold; /* Letra más gruesa */
-    font-size: 2vw; /* Agrandar la letra del 2% de la pantalla*/
+    font-size: 2.5vw; /* Agrandar la letra del 2% de la pantalla*/
+}
+
+.welcome-image {
+    background-color: #333; /* Color de fondo oscuro */
+    width: 400px;
+    height: 200px;
+    margin-left: 20px;
 }
 
 footer {
