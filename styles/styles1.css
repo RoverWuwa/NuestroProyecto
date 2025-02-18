@@ -1,5 +1,6 @@
 h1 {
     text-align: center; /* Centrar el titulo*/
+
 }
 
 body {
@@ -18,29 +19,45 @@ body::before {
     left: 0; /* Izquierda */
     width: 100%; /* Ancho */
     height: 100%; /* Alto */
-    background-color: rgba(0, 0, 0, 0.16); /* Color negro con 70% de opacidad */
+    background-color: rgba(0, 0, 0, 0.3); /* Color negro con 70% de opacidad */
     z-index: -1; /* Capa inferior. Asegura que el pseudo-elemento se coloque detrás del contenido del body */
 }
 
 .header-container { /* Estilo del header */
-    background-color: #333; /* Color de fondo */
+    background-color: #1a1a1a; /* Color de fondo */
     color: white; /* Color de la letra */
     width: 100%; /* Ancho del header */
-    padding: 20px 0; /* Espaciado del header */
+    padding: 20px; /* Espaciado del header */
     text-align: center; /* Centrar el texto */
+    font-size: 2vw; /* Agrandar la letra un 2% del tamaño de la pantalla */
 }
 
 .header-container ul { /* Estilo de la lista del header */
     list-style-type: none; /* Quitar los puntos de la lista */
     display: flex; /* Mostrar los elementos en fila horizontal */
     justify-content: center; /* Centrar los elementos */
-    gap: 20px; /* Espaciado entre los elementos */
+    gap: 25px; /* Espaciado entre los elementos */
     padding: 0; /* Quitar el padding */
     margin: 0; /* Quitar el margin */
+    font-size: 1.4vw; /* Agrandar la letra del 1.4% de la pantalla*/
+}
+
+.welcome-message { 
+    color: #f0f8ff; /* Color de letra más suave */
+    background-color: #333; /* Color de fondo oscuro */
+    padding: 20px; /* Espaciado interno */
+    margin: 20px auto; /* Espaciado externo, centrado horizontalmente */
+    width: 80%; /* Ancho del contenedor */
+    text-align: left; /* Alinear el texto a la izquierda */
+    border-radius: 10px; /* Bordes redondeados */
+    font-family: Arial, sans-serif; /* Fuente legible */
+    line-height: 1.6; /* Altura de línea para mejor legibilidad */
+    font-weight: bold; /* Letra más gruesa */
+    font-size: 2vw; /* Agrandar la letra del 2% de la pantalla*/
 }
 
 footer {
-    background-color: #333; /* Color de fondo */
+    background-color: #1a1a1a; /* Color de fondo */
     color: #fff; /* Color de la letra */
     padding: 20px 0; /* Espaciado */
     text-align: center; /* Centrar el texto */
