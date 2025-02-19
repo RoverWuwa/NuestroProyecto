@@ -5,6 +5,10 @@ body {
     background-size: cover; /* Cubrir todo el body */
     background-attachment: fixed; /* Fijar la imagen */
     background-position: center; /* Centrar la imagen */
+    margin-top: 80px; /*Añade un margen superior para el header no tape el contenido */
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 body::before {
@@ -28,6 +32,10 @@ body::before {
     font-weight: bold; /*Letra negrita*/
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     font-size: 17px; /* Agrandar la letra un 2% del tamaño de la pantalla */
+    position: fixed; /* Fija el header en la parte superior de la pantalla */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
 }
 
 .header-container ul { /* Estilo de la lista del header */
