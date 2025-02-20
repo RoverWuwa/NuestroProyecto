@@ -38,13 +38,23 @@ body::before {
     z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
 }
 
+.header-container h1 {
+    display: inline-block; /*Solo el texto sea interactivo*/
+}
+
+.header-container h1.underline-red { /*Estilos para el subrayado del h1*/
+    text-decoration: underline; /*Subrayar*/
+    text-decoration-color:  red; /*Color de la línea*/
+    text-underline-offset: 40px; /*Espaciado entre el texto y la línea*/
+}
+
 .header-container ul { /* Estilo de la lista del header */
     list-style-type: none; /* Quitar los puntos de la lista */
     display: flex; /* Mostrar los elementos en fila horizontal */
     justify-content: center; /* Centrar los elementos */
     gap: 25px; /* Espaciado entre los elementos */
     padding: 0; /* Quitar el padding */
-    margin: 0; /* Quitar el margin */
+    margin: 0 0 20px 100px; /* Quitar el margin */
     font-size: 1.3vw; /* Agrandar la letra del 1.4% de la pantalla*/
 }
 
@@ -58,8 +68,8 @@ body::before {
     color: #f0f8ff; /* Color de letra más suave */
     background-color: #333; /* Color de fondo oscuro */
     padding: 10px; /* Espaciado interno */
-    margin: 15px 45px; /* Espaciado externo, centrado horizontalmente */
-    width: 37%; /* Ancho del contenedor */
+    margin: 90px 45px 30px 45px; /* Espaciado externo, centrado horizontalmente */
+    width: 37%; /* Ancho del contenedor */;
     text-align: left; /* Alinear el texto a la izquierda */
     border-radius: 20px; /* Bordes redondeados */
     font-family: Arial, sans-serif; /* Fuente legible */
@@ -70,7 +80,7 @@ body::before {
     background-color: #333; /* Color de fondo oscuro */
     width: 500px; /* Ancho de la imagen */
     height: 370px; /* Alto de la imagen */
-    margin: 20px 100px 20px 20px; /* Margen: superior, derecha, inferior, izquierda */
+    margin: 250px 100px 40px 20px; /* Margen: superior, derecha, inferior, izquierda */
     border-radius: 20px; /* Bordes redondeados */
 }
 
@@ -79,8 +89,8 @@ body::before {
     align-items: center; /* Alinear los elementos al centro verticalmente */
     background-color: #a9a9a9; /* Color del fondo */
     padding: 10px; /* Espaciado interno */
-    margin: 15px 45px 15px 0; /* Espaciado externo, centrado horizontalmente */
-    width: 98.6%; /* Ancho del contenedor */
+    margin: 90px 45px 60px 0; /* Espaciado externo, centrado horizontalmente */
+    width: 98.6%; /* Ancho del contenedor */;
     border-radius: 20px; /* Bordes redondeados */
     color: #333333; /* Color de letra*/
     line-height: 1.6; /* Altura de línea para mejor legibilidad */
