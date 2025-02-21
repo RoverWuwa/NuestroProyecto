@@ -58,6 +58,106 @@ body::before {
     font-size: 1.3vw; /* Agrandar la letra del 1.4% de la pantalla*/
 }
 
+/* Estilo del submenu cuando no está visible */
+.hover-item1 .submenu1 {
+    display: none; /* No mostrar el submenu */
+    position: absolute; /* Posición absoluta */
+    background-color: #1a1a1a; /* Color de fondo */
+    border: 1px solid #333; /* Borde */
+    padding: 10px; /* Espaciado interno */
+    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+}
+
+/* Estilo del submenu cuando se hace hover */
+.hover-item1:hover .submenu1 {
+    display: block; /* Mostrar el submenu */
+}
+
+/* Estilo de la lista dentro del submenu */
+.hover-item1 .submenu1 ul {
+    list-style: none; /* Quitar los puntos de la lista */
+    padding: 0; /* Quitar el padding */
+    margin: 0; /* Quitar el margin */
+}
+
+/* Estilo de los elementos de la lista dentro del submenu */
+.hover-item1 .submenu1 ul li {
+    display: block; /* Mostrar los elementos en bloque */
+    padding: 5px; /* Espaciado interno */
+}
+
+.hover-item2 .submenu2 {
+    display: none; /* No mostrar el submenu */
+    position: absolute; /* Posición absoluta */
+    background-color: #1a1a1a; /* Color de fondo */
+    border: 1px solid #333; /* Borde */
+    padding: 10px; /* Espaciado interno */
+    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+}
+
+.hover-item2:hover .submenu2 {
+    display: block; /* Mostrar el submenu */
+}
+
+.hover-item2 .submenu2 ul {
+    list-style: none; /* Quitar los puntos de la lista */
+    padding: 0; /* Quitar el padding */
+    margin: 0; /* Quitar el margin */
+}
+
+.hover-item2 .submenu2 ul li {
+    display: block; /* Mostrar los elementos en bloque */
+    padding: 5px; /* Espaciado interno */
+}
+
+.hover-item3 .submenu3 {
+    display: none; /* No mostrar el submenu */
+    position: absolute; /* Posición absoluta */
+    background-color: #1a1a1a; /* Color de fondo */
+    border: 1px solid #333; /* Borde */
+    padding: 10px; /* Espaciado interno */
+    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+}
+
+.hover-item3:hover .submenu3 {
+    display: block; /* Mostrar el submenu */
+}
+
+.hover-item3 .submenu3 ul {
+    list-style: none; /* Quitar los puntos de la lista */
+    padding: 0; /* Quitar el padding */
+    margin: 0; /* Quitar el margin */
+}
+
+.hover-item3 .submenu3 ul li {
+    display: block; /* Mostrar los elementos en bloque */
+    padding: 5px; /* Espaciado interno */
+}
+
+.hover-item4 .submenu4 {
+    display: none; /* No mostrar el submenu */
+    position: absolute; /* Posición absoluta */
+    background-color: #1a1a1a; /* Color de fondo */
+    border: 1px solid #333; /* Borde */
+    padding: 10px; /* Espaciado interno */
+    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+}
+
+.hover-item4:hover .submenu4 {
+    display: block; /* Mostrar el submenu */
+}
+
+.hover-item4 .submenu4 ul {
+    list-style: none; /* Quitar los puntos de la lista */
+    padding: 0; /* Quitar el padding */
+    margin: 0; /* Quitar el margin */
+}
+
+.hover-item4 .submenu4 ul li {
+    display: block; /* Mostrar los elementos en bloque */
+    padding: 5px; /* Espaciado interno */
+}
+
 .welcome-message {/* Estilo del mensaje de bienvenida */
     display: flex; /* Usar flexbox para el diseño */
     align-items: center; /* Alinear los elementos al centro verticalmente */
