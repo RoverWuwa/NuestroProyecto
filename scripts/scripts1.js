@@ -25,24 +25,5 @@ headerh1.addEventListener("click", function() {
     }
 });
 
-// Agregar un event listener al elemento h1 para escuchar el evento de mouseover
-headerh1.addEventListener("mouseover", function() {
-  headerh1.classList.add("underline-red"); // Agregar la clase "underline-red" al elemento h1
-});
-
-// Agregar un event listener al elemento h1 para escuchar el evento de mouseout
-headerh1.addEventListener("mouseout", function() {
-  headerh1.classList.remove("underline-red"); // Eliminar la clase "underline-red" del elemento h1
-});
-
-let hoverItem=document.querySelector(".hover-item1");
-hoverItem.style.cursor="pointer";
-
-let hoverItem2=document.querySelector(".hover-item2");
-hoverItem2.style.cursor="pointer";
-
-let hoverItem3=document.querySelector(".hover-item3");
-hoverItem3.style.cursor="pointer";
-
-let hoverItem4=document.querySelector(".hover-item4");
-hoverItem4.style.cursor="pointer";
+document.querySelectorAll(".hover-item1 , .hover-item2 , .hover-item3 , .hover-item4")
+.forEach(item => {item.style.cursor = "pointer";});

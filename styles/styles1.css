@@ -1,6 +1,6 @@
 body {
     position: relative; /* Posición relativa para el pseudo-elemento */
-    background-image: url(images/background1.jpg); /* Imagen de fondo */
+    background-image: url(images/background2.jpg); /* Imagen de fondo */
     background-repeat: no-repeat; /* No repetir la imagen */
     background-size: cover; /* Cubrir todo el body */
     background-attachment: fixed; /* Fijar la imagen */
@@ -13,7 +13,7 @@ body {
 
 body::before {
     content: ""; /* Contenido vacío */
-    position: absolute; /* Posición absoluta */
+    position: absolute;  /* Posición absoluta */
     top: 0; /* Arriba */
     left: 0; /* Izquierda */
     width: 100%; /* Ancho */
@@ -23,11 +23,10 @@ body::before {
 }
 
 .header-container { /* Estilo del header */
-    background-color: #1a1a1a; /* Color de fondo */
+    background-color: #15297c; /* Color de fondo */
     color: white; /* Color de la letra */
     width: 97%; /* Ancho del header */
-    padding: 20px; /* Espaciado del header */
-    text-align: left; /* Centrar el texto */
+    padding: 5px 20px 5px 20px; /* Espaciado del header */
     font-family: Arial, Helvetica, sans-serif; /* Tipo de letra*/
     font-weight: bold; /*Letra negrita*/
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
@@ -38,14 +37,21 @@ body::before {
     z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
 }
 
-.header-container h1 {
+.header-container h1  {
     display: inline-block; /*Solo el texto sea interactivo*/
+    text-align: center;
+    padding: 20px;
 }
 
-.header-container h1.underline-red { /*Estilos para el subrayado del h1*/
-    text-decoration: underline; /*Subrayar*/
-    text-decoration-color:  red; /*Color de la línea*/
-    text-underline-offset: 40px; /*Espaciado entre el texto y la línea*/
+.header-container img { /* Estilo de la imagen dentro del header */
+    width: 100px; /* Ancho de la imagen */
+    height: 100px; /* Alto de la imagen */
+    margin: 0 0 -35px 0; /* Margen: superior, derecha, inferior, izquierda */
+    border-radius: 50%; /* Bordes redondeados para hacer la imagen circular */
+}
+
+.header-container h1:hover {
+        background-color: #142157;
 }
 
 .header-container ul { /* Estilo de la lista del header */
@@ -59,103 +65,53 @@ body::before {
 }
 
 /* Estilo del submenu cuando no está visible */
-.hover-item1 .submenu1 {
+.hover-item1 .submenu1, 
+.hover-item2 .submenu2,
+.hover-item3 .submenu3,
+.hover-item4 .submenu4 {
     display: none; /* No mostrar el submenu */
     position: absolute; /* Posición absoluta */
-    background-color: #1a1a1a; /* Color de fondo */
+    background-color: #15297c; /* Color de fondo */
     border: 1px solid #333; /* Borde */
     padding: 10px; /* Espaciado interno */
     z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
 }
 
 /* Estilo del submenu cuando se hace hover */
-.hover-item1:hover .submenu1 {
-    display: block; /* Mostrar el submenu */
-}
-
-/* Estilo de la lista dentro del submenu */
-.hover-item1 .submenu1 ul {
-    list-style: none; /* Quitar los puntos de la lista */
-    padding: 0; /* Quitar el padding */
-    margin: 0; /* Quitar el margin */
-}
-
-/* Estilo de los elementos de la lista dentro del submenu */
-.hover-item1 .submenu1 ul li {
-    display: block; /* Mostrar los elementos en bloque */
-    padding: 5px; /* Espaciado interno */
-}
-
-.hover-item2 .submenu2 {
-    display: none; /* No mostrar el submenu */
-    position: absolute; /* Posición absoluta */
-    background-color: #1a1a1a; /* Color de fondo */
-    border: 1px solid #333; /* Borde */
-    padding: 10px; /* Espaciado interno */
-    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
-}
-
-.hover-item2:hover .submenu2 {
-    display: block; /* Mostrar el submenu */
-}
-
-.hover-item2 .submenu2 ul {
-    list-style: none; /* Quitar los puntos de la lista */
-    padding: 0; /* Quitar el padding */
-    margin: 0; /* Quitar el margin */
-}
-
-.hover-item2 .submenu2 ul li {
-    display: block; /* Mostrar los elementos en bloque */
-    padding: 5px; /* Espaciado interno */
-}
-
-.hover-item3 .submenu3 {
-    display: none; /* No mostrar el submenu */
-    position: absolute; /* Posición absoluta */
-    background-color: #1a1a1a; /* Color de fondo */
-    border: 1px solid #333; /* Borde */
-    padding: 10px; /* Espaciado interno */
-    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
-}
-
-.hover-item3:hover .submenu3 {
-    display: block; /* Mostrar el submenu */
-}
-
-.hover-item3 .submenu3 ul {
-    list-style: none; /* Quitar los puntos de la lista */
-    padding: 0; /* Quitar el padding */
-    margin: 0; /* Quitar el margin */
-}
-
-.hover-item3 .submenu3 ul li {
-    display: block; /* Mostrar los elementos en bloque */
-    padding: 5px; /* Espaciado interno */
-}
-
-.hover-item4 .submenu4 {
-    display: none; /* No mostrar el submenu */
-    position: absolute; /* Posición absoluta */
-    background-color: #1a1a1a; /* Color de fondo */
-    border: 1px solid #333; /* Borde */
-    padding: 10px; /* Espaciado interno */
-    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
-}
-
+.hover-item1:hover .submenu1,
+.hover-item2:hover .submenu2,
+.hover-item3:hover .submenu3,
 .hover-item4:hover .submenu4 {
     display: block; /* Mostrar el submenu */
 }
 
+/* Estilo de la lista dentro del submenu */
+.hover-item1 .submenu1 ul,
+.hover-item2 .submenu2 ul,
+.hover-item3 .submenu3 ul,
 .hover-item4 .submenu4 ul {
     list-style: none; /* Quitar los puntos de la lista */
     padding: 0; /* Quitar el padding */
     margin: 0; /* Quitar el margin */
 }
 
+/* Estilo de los elementos de la lista dentro del submenu */
+.hover-item1 .submenu1 ul li,
+.hover-item2 .submenu2 ul li,
+.hover-item3 .submenu3 ul li,
 .hover-item4 .submenu4 ul li {
     display: block; /* Mostrar los elementos en bloque */
     padding: 5px; /* Espaciado interno */
+    line-height: 1.5;
+    text-align: left;
+}
+
+.header-container ul li:hover,
+.hover-item1 .submenu1 ul li:hover,
+.hover-item2 .submenu2 ul li:hover,
+.hover-item3 .submenu3 ul li:hover,
+.hover-item4 .submenu4 ul li:hover {
+    background-color: #142157; /* Cambiar el color de fondo al hacer hover */
 }
 
 .welcome-message {/* Estilo del mensaje de bienvenida */
@@ -187,7 +143,7 @@ body::before {
 .introduction { /* Estilo de la introducción */
     display: flex; /* Usar flexbox para el diseño */
     align-items: center; /* Alinear los elementos al centro verticalmente */
-    background-color: #a9a9a9; /* Color del fondo */
+    background-color: #f0f0f0; /* Color del fondo */
     padding: 10px; /* Espaciado interno */
     margin: 90px 45px 60px 0; /* Espaciado externo, centrado horizontalmente */
     width: 98.6%; /* Ancho del contenedor */;
@@ -213,8 +169,32 @@ body::before {
     font-weight: bold; /* Letra más gruesa */
 }
 
+.Benefits { /* Estilo de los beneficios */
+    display: flex; /* Usar flexbox para el diseño */
+    align-items: center; /* Alinear los elementos al centro verticalmente */
+    background-color: #f0f0f0; /* Color del fondo */
+    padding: 10px; /* Espaciado interno */
+    margin: 90px 45px 60px 0; /* Espaciado externo, centrado horizontalmente */
+    width: 98.6%; /* Ancho del contenedor */;
+    color: #333333; /* Color de letra*/
+    line-height: 1.6; /* Altura de línea para mejor legibilidad */
+    font-size: 1.4vw; /* Agrandar la letra del 1.4% de la pantalla*/
+}
+
+.Benefits img { /* Estilo de las imágenes de los beneficios */
+    width: 400px; /* Ancho de la imagen */
+    height: 400px; /* Alto de la imagen */
+    margin: 0 20px 0 80px; /* Margen: superior, derecha, inferior, izquierda */
+    border-radius: 50%; /* Bordes redondeados para hacer la imagen circular */
+    image-orientation: left; /* Orientación de la imagen */
+}
+.Benefits h2 { /* Estilo del título de los beneficios */
+    text-align: center; /* Centrar el texto */
+    font-family: 'Playfair Display', serif; /* Fuente legible */
+}
+
 footer { /* Estilo del footer */
-    background-color: #1a1a1a; /* Color de fondo */
+    background-color: #142157; /* Color de fondo */
     color: #fff; /* Color de la letra */
     padding: 20px 0; /* Espaciado */
     text-align: center; /* Centrar el texto */
