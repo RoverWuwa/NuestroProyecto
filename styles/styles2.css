@@ -1,0 +1,202 @@
+body {
+    position: relative; /* Posición relativa para el pseudo-elemento */
+    background-image: url(images/background2.jpg); /* Imagen de fondo */
+    background-repeat: no-repeat; /* No repetir la imagen */
+    background-size: cover; /* Cubrir todo el body */
+    background-attachment: fixed; /* Fijar la imagen */
+    background-position: center; /* Centrar la imagen */
+    margin-top: 80px; /*Añade un margen superior para el header no tape el contenido */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+body::before {
+    content: ""; /* Contenido vacío */
+    position: absolute;  /* Posición absoluta */
+    top: 0; /* Arriba */
+    left: 0; /* Izquierda */
+    width: 100%; /* Ancho */
+    height: 100%; /* Alto */
+    background-color: rgba(0, 0, 0, 0.5); /* Color negro con 70% de opacidad */
+    z-index: -1; /* Capa inferior. Asegura que el pseudo-elemento se coloque detrás del contenido del body */
+}
+
+
+.header-container { /* Estilo del header */
+    background-color: #15297c; /* Color de fondo */
+    color: white; /* Color de la letra */
+    width: 97%; /* Ancho del header */
+    padding: 5px 20px 5px 20px; /* Espaciado del header */
+    font-family: Arial, Helvetica, sans-serif; /* Tipo de letra*/
+    font-weight: bold; /*Letra negrita*/
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    font-size: 17px; /* Agrandar la letra un 2% del tamaño de la pantalla */
+    position: fixed; /* Fija el header en la parte superior de la pantalla */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+}
+
+.header-container h1  {
+    display: inline-block; /*Solo el texto sea interactivo*/
+    text-align: center;
+    padding: 20px;
+}
+
+.header-container img { /* Estilo de la imagen dentro del header */
+    width: 100px; /* Ancho de la imagen */
+    height: 100px; /* Alto de la imagen */
+    margin: 0 0 -35px 0; /* Margen: superior, derecha, inferior, izquierda */
+    border-radius: 50%; /* Bordes redondeados para hacer la imagen circular */
+}
+
+.header-container h1:hover {
+        background-color: #142157;
+}
+
+.header-container ul { /* Estilo de la lista del header */
+    list-style-type: none; /* Quitar los puntos de la lista */
+    display: flex; /* Mostrar los elementos en fila horizontal */
+    justify-content: center; /* Centrar los elementos */
+    gap: 25px; /* Espaciado entre los elementos */
+    padding: 0; /* Quitar el padding */
+    margin: 0 0 20px 100px; /* Quitar el margin */
+    font-size: 1.3vw; /* Agrandar la letra del 1.4% de la pantalla*/
+}
+
+/* Estilo del submenu cuando no está visible */
+.hover-item1 .submenu1, 
+.hover-item2 .submenu2,
+.hover-item3 .submenu3,
+.hover-item4 .submenu4 {
+    display: none; /* No mostrar el submenu */
+    position: absolute; /* Posición absoluta */
+    background-color: #15297c; /* Color de fondo */
+    border: 1px solid #333; /* Borde */
+    padding: 10px; /* Espaciado interno */
+    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+}
+
+/* Estilo del submenu cuando se hace hover */
+.hover-item1:hover .submenu1,
+.hover-item2:hover .submenu2,
+.hover-item3:hover .submenu3,
+.hover-item4:hover .submenu4 {
+    display: block; /* Mostrar el submenu */
+}
+
+/* Estilo de la lista dentro del submenu */
+.hover-item1 .submenu1 ul,
+.hover-item2 .submenu2 ul,
+.hover-item3 .submenu3 ul,
+.hover-item4 .submenu4 ul {
+    list-style: none; /* Quitar los puntos de la lista */
+    padding: 0; /* Quitar el padding */
+    margin: 0; /* Quitar el margin */
+}
+
+/* Estilo de los elementos de la lista dentro del submenu */
+.hover-item1 .submenu1 ul li,
+.hover-item2 .submenu2 ul li,
+.hover-item3 .submenu3 ul li,
+.hover-item4 .submenu4 ul li {
+    display: block; /* Mostrar los elementos en bloque */
+    padding: 5px; /* Espaciado interno */
+    line-height: 1.5;
+    text-align: left;
+}
+
+.header-container ul li:hover,
+.hover-item1 .submenu1 ul li:hover,
+.hover-item2 .submenu2 ul li:hover,
+.hover-item3 .submenu3 ul li:hover,
+.hover-item4 .submenu4 ul li:hover {
+    background-color: #142157; /* Cambiar el color de fondo al hacer hover */
+}
+
+.welcome-message {/* Estilo del mensaje de bienvenida */
+    display: flex; /* Usar flexbox para el diseño */
+    align-items: center; /* Alinear los elementos al centro verticalmente */
+}
+
+.welcome-text {
+    flex: 1;
+    color: #f0f8ff; /* Color de letra más suave */
+    background-color: #333; /* Color de fondo oscuro */
+    padding: 10px; /* Espaciado interno */
+    margin: 90px 45px 30px 45px; /* Espaciado externo, centrado horizontalmente */
+    width: 37%; /* Ancho del contenedor */;
+    text-align: left; /* Alinear el texto a la izquierda */
+    border-radius: 20px; /* Bordes redondeados */
+    font-family: Arial, sans-serif; /* Fuente legible */
+    font-size: 2.2vw; /* Agrandar la letra del 2% de la pantalla*/
+}
+
+.welcome-image {
+    background-color: #333; /* Color de fondo oscuro */
+    width: 500px; /* Ancho de la imagen */
+    height: 370px; /* Alto de la imagen */
+    margin: 250px 100px 40px 20px; /* Margen: superior, derecha, inferior, izquierda */
+    border-radius: 20px; /* Bordes redondeados */
+}
+
+.introduction { /* Estilo de la introducción */
+    display: flex; /* Usar flexbox para el diseño */
+    align-items: center; /* Alinear los elementos al centro verticalmente */
+    background-color: #f0f0f0; /* Color del fondo */
+    padding: 10px; /* Espaciado interno */
+    margin: 90px 45px 60px 0; /* Espaciado externo, centrado horizontalmente */
+    width: 98.6%; /* Ancho del contenedor */;
+    border-radius: 20px; /* Bordes redondeados */
+    color: #333333; /* Color de letra*/
+    line-height: 1.6; /* Altura de línea para mejor legibilidad */
+    font-size: 1.4vw; /* Agrandar la letra del 1.4% de la pantalla*/
+}
+
+.introduction-question { /* Estilo de la pregunta */
+    flex: 1; /* Ocupar todo el espacio disponible */
+    text-align: left; /* Alinear el texto a la izquierda */
+    font-family: 'Playfair Display', serif; /* Fuente legible */
+    text-decoration: underline; /* Subrayar el texto */
+}
+.introduction-text{ /* Estilo del texto de la introducción */
+    flex: 1; /* Ocupar todo el espacio disponible */
+    text-align: center; /* Alinear el texto a la izquierda */
+    font-family: 'Playfair Display', sans-serif; /* Fuente legible */
+}
+
+.introduction-text p:first-of-type { /* Estilo del primer párrafo del texto introductorio */
+    font-weight: bold; /* Letra más gruesa */
+}
+
+.Benefits { /* Estilo de los beneficios */
+    display: flex; /* Usar flexbox para el diseño */
+    align-items: center; /* Alinear los elementos al centro verticalmente */
+    background-color: #f0f0f0; /* Color del fondo */
+    padding: 10px; /* Espaciado interno */
+    margin: 90px 45px 60px 0; /* Espaciado externo, centrado horizontalmente */
+    width: 98.6%; /* Ancho del contenedor */;
+    color: #333333; /* Color de letra*/
+    line-height: 1.6; /* Altura de línea para mejor legibilidad */
+    font-size: 1.4vw; /* Agrandar la letra del 1.4% de la pantalla*/
+}
+
+.Benefits img { /* Estilo de las imágenes de los beneficios */
+    width: 400px; /* Ancho de la imagen */
+    height: 400px; /* Alto de la imagen */
+    margin: 0 20px 0 80px; /* Margen: superior, derecha, inferior, izquierda */
+    border-radius: 50%; /* Bordes redondeados para hacer la imagen circular */
+    image-orientation: left; /* Orientación de la imagen */
+}
+.Benefits h2 { /* Estilo del título de los beneficios */
+    text-align: center; /* Centrar el texto */
+    font-family: 'Playfair Display', serif; /* Fuente legible */
+}
+
+footer { /* Estilo del footer */
+    background-color: #142157; /* Color de fondo */
+    color: #fff; /* Color de la letra */
+    padding: 20px 0; /* Espaciado */
+    text-align: center; /* Centrar el texto */
+}

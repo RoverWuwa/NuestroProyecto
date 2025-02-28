@@ -15,15 +15,28 @@ headerh1.style.cursor = "pointer"; // Cambiar el cursor a pointer para indicar q
 
 // Agregar un event listener al elemento h1 para escuchar el evento de clic
 headerh1.addEventListener("click", function() {
-    let welcomeImage = document.querySelector(".welcome-image"); // Seleccionar el elemento con la clase welcome-image
-    if (welcomeImage.src.includes("styles/images/welcome1.webp")) { // Si la imagen del elemento welcome-image incluye "styles/images/welcome1.webp"
-        welcomeImage.src = "styles/images/welcome2.jpg"; // Cambiar la imagen del elemento welcome2.jpg a "welcome.png"
-    } else if (welcomeImage.src.includes("styles/images/welcome2.jpg")) {
-        welcomeImage.src = "styles/images/welcome3.webp"; // Cambiar la imagen del elemento welcome-image a "bienvenido.png"
-    } else if (welcomeImage.src.includes("styles/images/welcome3.webp")) { // Si la imagen del elemento welcome-image incluye "styles/images/welcome3.webp"
-        welcomeImage.src = "styles/images/welcome1.webp"; // Cambiar la imagen del elemento welcome-image a "styles/images/welcome2.webp"
-    }
+  location.reload(); // Recargar la página cuando se hace clic en el elemento h1
 });
 
+// Seleccionar todos los elementos con las clases hover-item1, hover-item2, hover-item3 y hover-item4
 document.querySelectorAll(".hover-item1 , .hover-item2 , .hover-item3 , .hover-item4")
-.forEach(item => {item.style.cursor = "pointer";});
+.forEach(item => {
+  item.style.cursor = "pointer"; // Cambiar el cursor a pointer para indicar que son interactivos
+});
+
+
+window.addEventListener('scroll', function() {
+  // Obtiene la posición del scroll
+  const scrollPosition = window.scrollY;
+
+  // Obtén los elementos
+  const invitation = document.getElementById('.invitation');
+  const invitation2 = document.getElementById('.invitation2');
+
+  // Calcula un desplazamiento basado en el scroll
+  const offset = scrollPosition / 2; // Ajusta esta fórmula para un efecto más sutil o más dramático
+
+  // Aplica el desplazamiento a los elementos
+  invitation.style.transform = `translateY(${offset}px)`;
+  invitation2.style.transform = `translateY(-${offset}px)`;
+});

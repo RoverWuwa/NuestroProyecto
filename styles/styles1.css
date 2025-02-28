@@ -1,29 +1,15 @@
 body {
     position: relative; /* Posición relativa para el pseudo-elemento */
-    background-image: url(images/background2.jpg); /* Imagen de fondo */
-    background-repeat: no-repeat; /* No repetir la imagen */
-    background-size: cover; /* Cubrir todo el body */
-    background-attachment: fixed; /* Fijar la imagen */
-    background-position: center; /* Centrar la imagen */
+    background-color: #fef5f2;
     margin-top: 80px; /*Añade un margen superior para el header no tape el contenido */
     top: 0;
     left: 0;
     z-index: 1000;
 }
 
-body::before {
-    content: ""; /* Contenido vacío */
-    position: absolute;  /* Posición absoluta */
-    top: 0; /* Arriba */
-    left: 0; /* Izquierda */
-    width: 100%; /* Ancho */
-    height: 100%; /* Alto */
-    background-color: rgba(0, 0, 0, 0.5); /* Color negro con 70% de opacidad */
-    z-index: -1; /* Capa inferior. Asegura que el pseudo-elemento se coloque detrás del contenido del body */
-}
 
 .header-container { /* Estilo del header */
-    background-color: #15297c; /* Color de fondo */
+    background-color: #2d6b04; /* Color de fondo */
     color: white; /* Color de la letra */
     width: 97%; /* Ancho del header */
     padding: 5px 20px 5px 20px; /* Espaciado del header */
@@ -51,7 +37,7 @@ body::before {
 }
 
 .header-container h1:hover {
-        background-color: #142157;
+        background-color: #0d3d00;
 }
 
 .header-container ul { /* Estilo de la lista del header */
@@ -71,7 +57,7 @@ body::before {
 .hover-item4 .submenu4 {
     display: none; /* No mostrar el submenu */
     position: absolute; /* Posición absoluta */
-    background-color: #15297c; /* Color de fondo */
+    background-color: #0d3d00; /* Color de fondo */
     border: 1px solid #333; /* Borde */
     padding: 10px; /* Espaciado interno */
     z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
@@ -111,7 +97,12 @@ body::before {
 .hover-item2 .submenu2 ul li:hover,
 .hover-item3 .submenu3 ul li:hover,
 .hover-item4 .submenu4 ul li:hover {
-    background-color: #142157; /* Cambiar el color de fondo al hacer hover */
+    background-color: #045f1f; /* Cambiar el color de fondo al hacer hover */
+}
+
+.submenu1 ul li a {
+    text-decoration: none;
+    color: inherit;
 }
 
 .welcome-message {/* Estilo del mensaje de bienvenida */
@@ -121,52 +112,158 @@ body::before {
 
 .welcome-text {
     flex: 1;
-    color: #f0f8ff; /* Color de letra más suave */
-    background-color: #333; /* Color de fondo oscuro */
+    color: #121314; /* Color de letra más suave */
     padding: 10px; /* Espaciado interno */
     margin: 90px 45px 30px 45px; /* Espaciado externo, centrado horizontalmente */
-    width: 37%; /* Ancho del contenedor */;
-    text-align: left; /* Alinear el texto a la izquierda */
-    border-radius: 20px; /* Bordes redondeados */
-    font-family: Arial, sans-serif; /* Fuente legible */
-    font-size: 2.2vw; /* Agrandar la letra del 2% de la pantalla*/
+    text-align: center; /* Alinear el texto a la izquierda */
+    animation: scaleText 4.5s ease-out;
 }
 
-.welcome-image {
-    background-color: #333; /* Color de fondo oscuro */
-    width: 500px; /* Ancho de la imagen */
-    height: 370px; /* Alto de la imagen */
-    margin: 250px 100px 40px 20px; /* Margen: superior, derecha, inferior, izquierda */
-    border-radius: 20px; /* Bordes redondeados */
+.welcome-text .text1,
+.welcome-text .text3 {
+    font-size: 6vw; /* Tamaño de la fuente */
+    font-weight: 800; /* Grosor de la fuente */
+    font-family: 'Montserrat', sans-serif; /* Tipo de letra */
+    color: #961435; /* Color del texto */
+    animation: scaleText 2.5s ease-out; /* Animación de escalado */
+}
+
+.welcome-text .text4,
+.welcome-text .text5 {
+    font-size: 1.5vw; /* Tamaño de la fuente */
+    color: rgb(71, 71, 71); /* Color del texto */
+    font-weight: bold; /* Grosor de la fuente */
+    font-family: 'Lato', sans-serif; /* Tipo de letra */
+    animation: scaleText 1s ease-out; /* Animación de escalado */
+}
+
+.welcome-text .text5 {
+    color: #a7062e; /* Color del texto */
+    animation: moverTexto 2s infinite ease-in-out; /* Animación de movimiento */
+}
+
+@keyframes moverTexto {
+    0% {
+        transform: translateY(0); /* Posición inicial */
+    }
+    50% {
+        transform: translateY(10px); /* Posición intermedia */
+    }
+    100% {
+        transform: translateY(0); /* Posición final */
+    }
+}
+
+@keyframes scaleText {
+    from {
+        transform: scale(1.2); /* Escala inicial */
+        opacity: 0; /* Opacidad inicial */
+    }
+    to {
+        transform: scale(1); /* Escala final */
+        opacity: 1; /* Opacidad final */
+    }
+}
+
+.welcome-text .text2 {
+    font-size: 4.5vw; /* Tamaño de la fuente */
+    color: #797339; /* Color del texto */
+    animation: scaleText 2.5s ease-out; /* Animación de escalado */
 }
 
 .introduction { /* Estilo de la introducción */
     display: flex; /* Usar flexbox para el diseño */
-    align-items: center; /* Alinear los elementos al centro verticalmente */
-    background-color: #f0f0f0; /* Color del fondo */
+    flex-direction: column; /* Alinear los elementos en columna */
+    align-items: center; /* Alinear los elementos al centro horizontalmente */
+    background-color: #ebe0c2; /* Color del fondo */
     padding: 10px; /* Espaciado interno */
-    margin: 90px 45px 60px 0; /* Espaciado externo, centrado horizontalmente */
-    width: 98.6%; /* Ancho del contenedor */;
-    border-radius: 20px; /* Bordes redondeados */
+    margin: 90px auto 60px auto; /* Espaciado externo, centrado horizontalmente */
+    width: 100%; /* Ancho del contenedor */;
     color: #333333; /* Color de letra*/
     line-height: 1.6; /* Altura de línea para mejor legibilidad */
     font-size: 1.4vw; /* Agrandar la letra del 1.4% de la pantalla*/
+    border: 3px solid #c2c2c2; /* Borde */
 }
 
-.introduction-question { /* Estilo de la pregunta */
-    flex: 1; /* Ocupar todo el espacio disponible */
-    text-align: left; /* Alinear el texto a la izquierda */
-    font-family: 'Playfair Display', serif; /* Fuente legible */
-    text-decoration: underline; /* Subrayar el texto */
+.introduction h2 { /* Estilo del título de la introducción */
+    color: #961435; /* Color del texto */
+    font-weight: 800; /* Grosor de la fuente */
+    font-family: 'Montserrat', sans-serif; /* Tipo de letra */
 }
-.introduction-text{ /* Estilo del texto de la introducción */
-    flex: 1; /* Ocupar todo el espacio disponible */
-    text-align: center; /* Alinear el texto a la izquierda */
-    font-family: 'Playfair Display', sans-serif; /* Fuente legible */
+
+.introduction .introduction-text { /* Estilo del texto de introducción */
+    font-weight: bold; /* Grosor de la fuente */
+    font-family: 'Lato', sans-serif; /* Tipo de letra */
+}
+
+.introduction-question { /* Estilo de la pregunta de introducción */
+    order: 1; /* Ordenar este elemento primero */
+    width: 35%; /* Ancho reducido para centrar el texto */
+    text-align: center; /* Centrar el texto */
+    margin-top: -15px;
+}
+
+.introduction-text { /* Estilo del texto de introducción */
+    order: 2; /* Ordenar este elemento segundo */
+    width: 35%; /* Ancho reducido para centrar el texto */
+    text-align: center; /* Centrar el texto */
 }
 
 .introduction-text p:first-of-type { /* Estilo del primer párrafo del texto introductorio */
     font-weight: bold; /* Letra más gruesa */
+}
+
+.introduction .invitation, .introduction .invitation2 {
+    background-color: white;
+    width: 25%; /* Ancho reducido para centrar el texto */
+    text-align: center; /* Centrar el texto */
+    margin: 20px 0 -190px; /* Espaciado: superior, derecha, inferior */
+    padding-right: -10px;
+    border-radius: 20px;
+    font-family: 'Lato', sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra alrededor del borde */
+}
+
+.introduction .invitation {
+    align-self: flex-start; /* Alinear a la izquierda */
+    margin-right: auto; /* Alinear a la izquierda */
+}
+
+.introduction .invitation2 {
+    align-self: flex-end; /* Alinear a la derecha */
+    margin-left: auto; /* Alinear a la derecha */
+}
+
+.introduction .invitation h4, .introduction .invitation2 h4 {
+    border: 3px solid #797333; /* Borde de 3px con color */
+    font-size: 14px; /* Tamaño de la fuente */
+    padding: 5px 15px; /* Espaciado interno: vertical, horizontal */
+    width: auto; /* Ancho automático */
+    display: inline-block; /* Mostrar en línea y permitir tamaño */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el elemento */
+    color: #797339; /* Color del texto */
+    border-radius: 20px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra alrededor del borde */
+}
+
+.introduction .invitation2 h4 {
+    color: #961435; /* Color distinto para .invitation2 h4 */
+    border: 3px solid #961435; /* Borde de 3px con color */
+}
+
+.introduction .invitation h4:hover, .introduction .invitation2 h4:hover {
+    transform: scale(1.3); /* Escalar el elemento al pasar sobre él */
+    background-color: #797333; /* Cambiar el color de fondo al pasar sobre el elemento */
+    color: white; /* Cambiar el color del texto al pasar sobre el elemento */
+}
+
+.introduction .invitation2 h4:hover {
+    background-color: #961435; /* Cambiar el color de fondo al pasar sobre el elemento */
+}
+
+.invitation a, .invitation2 a {
+    text-decoration: none;
+    color: inherit;
 }
 
 .Benefits { /* Estilo de los beneficios */
@@ -194,7 +291,7 @@ body::before {
 }
 
 footer { /* Estilo del footer */
-    background-color: #142157; /* Color de fondo */
+    background-color: #0d3d00; /* Color de fondo */
     color: #fff; /* Color de la letra */
     padding: 20px 0; /* Espaciado */
     text-align: center; /* Centrar el texto */
