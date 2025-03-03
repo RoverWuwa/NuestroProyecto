@@ -269,6 +269,7 @@ body {
 .Benefits { /* Estilo de los beneficios */
     display: flex; /* Usar flexbox para el diseño */
     align-items: center; /* Alinear los elementos al centro horizontalmente */
+    flex-direction: column;
     background-color: #961435; /* Color del fondo */
     padding: 10px; /* Espaciado interno */
     margin: 90px 45px 60px 0; /* Espaciado externo, centrado horizontalmente */
@@ -279,6 +280,7 @@ body {
 }
 
 .Benefits .Benefits1 {
+    flex: 3;
     background-color: #ebe0c2; /* Color de fondo */
     color: #333; /* Color de la letra */
     width: 60%; /* Ancho del contenedor */
@@ -291,7 +293,7 @@ body {
     display: flex; /* Usar flexbox para el diseño */
     align-items: center; /* Alinear los elementos al centro verticalmente */
     padding-left: 30px; /* Ajustar espacio a la izquierda para la imagen */
-    margin-right: 0; /* Eliminar margen negativo */
+    margin-right: 600px; /* Eliminar margen negativo */
 }
 
 .Benefits .Benefits1 p {
@@ -310,10 +312,19 @@ body {
 }
 
 .Benefits h2 { /* Estilo del título de los beneficios */
+    flex: 1;
     text-align: center; /* Centrar el texto */
     font-family: 'Playfair Display', serif; /* Fuente legible */
     margin-bottom: 10px;
     margin-right: 300px;
+}
+
+.Benefits-image img {
+    flex: 2;
+    width: 7%;
+    height: auto;
+    margin-left: 970px;
+    margin-bottom: -150px;
 }
 
 
