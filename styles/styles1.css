@@ -261,9 +261,9 @@ body {
     background-color: #961435; /* Cambiar el color de fondo al pasar sobre el elemento */
 }
 
-.invitation a, .invitation2 a {
-    text-decoration: none;
-    color: inherit;
+.invitation a, .invitation2 a { /*Estilos para el enlace hacia la seccion emprendimiento del boton 2*/
+    text-decoration: none; /*Quitar el subrayado*/
+    color: inherit; /*Conservar su color*/
 }
 
 .Benefits { /* Estilo de los beneficios */
@@ -298,38 +298,46 @@ body {
 
 .Benefits .Benefits1 p {
     font-size: 1vw; /* Tamaño de la fuente más pequeño */
-    margin-left: 40px;
+    margin-left: 40px; /*Margen izquierdo de 40px*/
 }
 
-.Benefits .Benefits1 img {
-    width: 35%;
-    height: auto;
+.Benefits .Benefits1 img { /* Estilos para la imagen a la izquierda*/
+    width: 35%; /*Ancho de 35%*/
+    height: auto; /*altura atomatica*/
     margin-left: auto; /* Empujar la imagen a la derecha */
     margin-right: 25px; /* Ajustar margen para posicionar la imagen */
-    border: 50px #797339;
-    border-radius: 20px;
+    border: 50px #797339; /* Borde de color*/
+    border-radius: 20px; /*Bordes redondeados*/
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); /* Sombra alrededor del borde */
 }
 
 .Benefits h2 { /* Estilo del título de los beneficios */
-    flex: 1;
+    flex: 1; /*Primer elemento*/
     text-align: center; /* Centrar el texto */
     font-family: 'Playfair Display', serif; /* Fuente legible */
-    margin-bottom: 10px;
-    margin-right: 300px;
+    margin-bottom: 10px; /*Margen inferior de 10px*/
+    margin-right: 300px;/*Margen derecho de 300px*/
 }
 
-.Benefits-image img {
-    flex: 2;
-    width: 4%;
-    height: auto;
-    margin-left: 970px;
-    margin-bottom: -150px;
+.Benefits-image img { /*Estilos para el boton*/
+    flex: 2; /*Segundo elemento*/
+    width: 4%; /*Ancho de 4%*/
+    height: auto; /*altura automatica*/
+    margin-left: 970px; /*Margen izquierdo de 970px*/
+    margin-bottom: -150px; /*Margen inferior de -150px*/
 }
 
-.Benefits-image img:hover {
-    cursor: pointer;
-    transform: scale(1.4);
+.Benefits-image img:hover { /*Estilos del boton cuando se hace hover*/
+    cursor: pointer; /*Estilo del cursor*/
+    transform: scale(1.4); /*Escala de 1.4*/
+}
+
+.Benefits-image2 img { /*Estilos del indicador de pagina*/
+    flex: 4; /*Cuarto elemento*/
+    width: 7%; /*Ancho de 7%*/
+    height: auto; /*Altura automatica*/
+    margin-left: 300px; /*Margen izquierdo de 300px*/
+    margin-top: 20px; /*Margen superior de 20px*/
 }
 
 
