@@ -321,10 +321,15 @@ body {
 
 .Benefits-image img {
     flex: 2;
-    width: 7%;
+    width: 4%;
     height: auto;
     margin-left: 970px;
     margin-bottom: -150px;
+}
+
+.Benefits-image img:hover {
+    cursor: pointer;
+    transform: scale(1.4);
 }
 
 
