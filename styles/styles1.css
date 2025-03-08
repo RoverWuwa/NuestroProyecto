@@ -227,11 +227,32 @@ body {
 .introduction .invitation {
     align-self: flex-start; /* Alinear a la izquierda */
     margin-right: auto; /* Alinear a la izquierda */
+    border: 8px solid #797339;
 }
 
 .introduction .invitation2 {
     align-self: flex-end; /* Alinear a la derecha */
     margin-left: auto; /* Alinear a la derecha */
+    border: 8px solid #961435;
+}
+
+@keyframes elevar {
+    0% {
+        transform: translateY(0px);
+        opacity: 0;
+    }
+    50% {
+        transform: translate(-30px);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-60px);
+    }
+    
+}
+
+.elevado {
+    animation: elevar 5.5s ease-in-out 0.5s forwards;
 }
 
 .introduction .invitation h4, .introduction .invitation2 h4 {
@@ -296,6 +317,10 @@ body {
     margin-right: 600px; /* Eliminar margen negativo */
 }
 
+.Benefits .Benefits1 h4 {
+    margin-top: -50px;
+}
+
 .Benefits .Benefits1 p {
     font-size: 1vw; /* Tamaño de la fuente más pequeño */
     margin-left: 40px; /*Margen izquierdo de 40px*/
@@ -340,6 +365,41 @@ body {
     margin-top: 20px; /*Margen superior de 20px*/
 }
 
+.Results { /*Estilos para la clase resultados*/
+    display: flex; /*Usar flexbox*/
+    text-align: center; /*Alinear al centro*/
+    flex-direction: column; /*Elementos en columna*/
+}
+
+.Results h2 { 
+    flex: 1; /*Primer elemento*/
+    color: #797333; /*Color de la tetra*/
+    font-family: 'Montserrat', sans-serif; /* Tipo de letra */
+    font-weight: bold;
+}
+
+.Results img { /*Estilos generales para las imagenes*/
+    margin: 0 20px; /*Margenes de 20px a derecha e izquierda*/
+    border-radius: 50%; /*Bordes redondos*/
+}
+
+.Results .image1 img { /*Imagen1 como segundo elemento y alinearla a la izquierda*/
+    float: 2;
+    float: left;
+    border: 16px solid #797333;
+}
+
+.Results .image2 img { /*imagen2 como tercer elemento y alinearla a la derecha*/
+    flex: 3;
+    float: right;
+    margin-top: -300px; /*Margen -300px para ajustarla*/
+    border: 16px solid #961435;
+}
+
+.Results .image3 img { 
+    margin-top: -300px; /*margen top de -300px para ajustarla*/
+    border: 16px solid #045f1f;
+}
 
 footer { /* Estilo del footer */
     background-color: #0d3d00; /* Color de fondo */
