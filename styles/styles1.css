@@ -7,9 +7,8 @@ body {
     z-index: 1000;
 }
 
-
 .header-container { /* Estilo del header */
-    background-color: #204d03; /* Color de fondo */
+    background-color: #102501; /* Color de fondo */
     color: white; /* Color de la letra */
     width: 97%; /* Ancho del header */
     padding: 5px 20px 5px 20px; /* Espaciado del header */
@@ -224,6 +223,17 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra alrededor del borde */
 }
 
+.invitation, .invitation2 {
+    transform: translateY(50px); /* Comienza desplazado hacia abajo */
+    opacity: 0; /* Inicialmente invisible */
+    transition: transform 1s ease, opacity 1s ease; 
+}
+
+.invitation.visible, .invitation2.visible {
+    transform: translateY(0); /* Regresa a su posición original */
+    opacity: 1; /* Se vuelve visible */
+}
+
 .introduction .invitation {
     align-self: flex-start; /* Alinear a la izquierda */
     margin-right: auto; /* Alinear a la izquierda */
@@ -234,25 +244,6 @@ body {
     align-self: flex-end; /* Alinear a la derecha */
     margin-left: auto; /* Alinear a la derecha */
     border: 8px solid #961435;
-}
-
-@keyframes elevar {
-    0% {
-        transform: translateY(0px);
-        opacity: 0;
-    }
-    50% {
-        transform: translate(-30px);
-        opacity: 1;
-    }
-    100% {
-        transform: translate(-60px);
-    }
-    
-}
-
-.elevado {
-    animation: elevar 5.5s ease-in-out 0.5s forwards;
 }
 
 .introduction .invitation h4, .introduction .invitation2 h4 {
@@ -287,6 +278,7 @@ body {
     color: inherit; /*Conservar su color*/
 }
 
+.stories,
 .Benefits { /* Estilo de los beneficios */
     display: flex; /* Usar flexbox para el diseño */
     align-items: center; /* Alinear los elementos al centro horizontalmente */
@@ -300,6 +292,7 @@ body {
     font-size: 1.4vw; /* Agrandar la letra del 1.4% de la pantalla */
 }
 
+.stories .stories1,
 .Benefits .Benefits1 {
     flex: 3;
     background-color: #ebe0c2; /* Color de fondo */
@@ -321,11 +314,13 @@ body {
     margin-top: -50px;
 }
 
+.stories .stories1 p,
 .Benefits .Benefits1 p {
     font-size: 1vw; /* Tamaño de la fuente más pequeño */
     margin-left: 40px; /*Margen izquierdo de 40px*/
 }
 
+.stories .stories1 img,
 .Benefits .Benefits1 img { /* Estilos para la imagen a la izquierda*/
     width: 35%; /*Ancho de 35%*/
     height: auto; /*altura atomatica*/
@@ -336,6 +331,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); /* Sombra alrededor del borde */
 }
 
+.stories h2
 .Benefits h2 { /* Estilo del título de los beneficios */
     flex: 1; /*Primer elemento*/
     text-align: center; /* Centrar el texto */
@@ -344,6 +340,7 @@ body {
     margin-right: 300px;/*Margen derecho de 300px*/
 }
 
+.storiesBotton img,
 .Benefits-image img { /*Estilos para el boton*/
     flex: 2; /*Segundo elemento*/
     width: 4%; /*Ancho de 4%*/
@@ -352,11 +349,13 @@ body {
     margin-bottom: -150px; /*Margen inferior de -150px*/
 }
 
+.storiesBotton img:hover,
 .Benefits-image img:hover { /*Estilos del boton cuando se hace hover*/
     cursor: pointer; /*Estilo del cursor*/
     transform: scale(1.4); /*Escala de 1.4*/
 }
 
+.storiesIndicador img,
 .Benefits-image2 img { /*Estilos del indicador de pagina*/
     flex: 4; /*Cuarto elemento*/
     width: 7%; /*Ancho de 7%*/
@@ -399,6 +398,18 @@ body {
 .Results .image3 img { 
     margin-top: -300px; /*margen top de -300px para ajustarla*/
     border: 16px solid #045f1f;
+}
+
+.stories .stories1 { /*Estilos extras para stories1*/
+    margin-right: 300px; /*Margen derecho de 300px para acomodar mejor */
+}
+
+.storiesBotton { /*Estilos extras para .storiesBotton*/
+    padding-left: 7%; /*Margen interior de 3% para acomodarlo mejor*/
+}
+
+.stories h3 { /*ERstilos extras de h3*/
+    margin: 0 -300px -10px 0; /*Margen 0 -300px -10px 0 para acomodarlo mejor*/
 }
 
 footer { /* Estilo del footer */

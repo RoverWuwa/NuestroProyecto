@@ -1,29 +1,3 @@
- // Agregar un event listener al objeto window para escuchar el evento de desplazamiento (scroll)
-window.addEventListener("scroll", function() { // Función anónima que se ejecuta cuando se desplaza la página
-  let headerh1 = document.querySelector(".header-container h1"); // Seleccionar el elemento h1 dentro del contenedor con la clase header-container
-  if (window.scrollY > 20) { // Si la posición vertical de la página es mayor a 20
-    headerh1.textContent = "TFH"; // Cambiar el texto del elemento h1 a "TFH"
-  }
-  else {
-    headerh1.textContent = "Teens Finance Hub"; // Cambiar el texto del elemento h1 a "Teens Finance Hub"
-  }
-});
-
-// Seleccionar el elemento h1 dentro del contenedor con la clase header-container y convertirlo en un botón
-let headerh1 = document.querySelector(".header-container h1");
-headerh1.style.cursor = "pointer"; // Cambiar el cursor a pointer para indicar que es un botón
-
-// Agregar un event listener al elemento h1 para escuchar el evento de clic
-headerh1.addEventListener("click", function() {
-  location.reload(); // Recargar la página cuando se hace clic en el elemento h1
-});
-
-// Seleccionar todos los elementos con las clases hover-item1, hover-item2, hover-item3 y hover-item4
-document.querySelectorAll(".hover-item1 , .hover-item2 , .hover-item3 , .hover-item4")
-.forEach(item => {
-  item.style.cursor = "pointer"; // Cambiar el cursor a pointer para indicar que son interactivos
-});
-
 let button = document.querySelector(".Benefits-image img"); /* Declarar la variable button y asignarle el elemento .Benefits-image img*/
 button.addEventListener("click", function() { /*Agregrar un EventListener para cuando se haga click sobre button*/
   let text = document.querySelector(".Benefits1 p"); /* Declarar la variable text y asignarle el elemento .Benefits1 p */
@@ -50,23 +24,3 @@ button.addEventListener("click", function() { /*Agregrar un EventListener para c
     text2.textContent="Finanzas Personales";
   }
 });
-
-/*Animacion para los elementos .invitation y .invitation2*/
-const observer = new IntersectionObserver((entries) => { /*Detecta automáticamente cuándo un elemento entra o sale del viewport. */
-  entries.forEach(entry => {
-    const element = entry.target;
-    /*Cuando el elemento entra al campo de visión, se añade la clase visible, ejecutando la animación. */
-    if (entry.isIntersecting) {
-      // Añadimos la clase "visible" cuando el elemento está en el viewport
-      element.classList.add('visible');
-      /*Cuando sale del campo de visión, se elimina la clase visible, preparándolo para repetir la animación. */
-    } else {
-      // Eliminamos la clase "visible" cuando sale del viewport
-      element.classList.remove('visible');
-    }
-  });
-}, { threshold: 0.2 }); // Se activa cuando el 20% del elemento es visible
-
-// Seleccionar los elementos a observar
-const invitations = document.querySelectorAll('.invitation, .invitation2');
-invitations.forEach(invite => observer.observe(invite));
