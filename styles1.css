@@ -1,0 +1,440 @@
+body {
+    position: relative; /* Posición relativa para el pseudo-elemento */
+    background-color: #fef5f2;
+    margin-top: 80px; /*Añade un margen superior para el header no tape el contenido */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.header-container { /* Estilo del header */
+    background-color: #102501; /* Color de fondo */
+    color: white; /* Color de la letra */
+    width: 97%; /* Ancho del header */
+    padding: 5px 20px 5px 20px; /* Espaciado del header */
+    font-family: Arial, Helvetica, sans-serif; /* Tipo de letra*/
+    font-weight: bold; /*Letra negrita*/
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    font-size: 17px; /* Agrandar la letra un 2% del tamaño de la pantalla */
+    position: fixed; /* Fija el header en la parte superior de la pantalla */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+}
+
+.sections {
+    background-color: #102501;
+}
+
+.header-container h1  {
+    display: inline-block; /*Solo el texto sea interactivo*/
+    text-align: center;
+    padding: 20px;
+}
+
+.header-container img { /* Estilo de la imagen dentro del header */
+    width: 100px; /* Ancho de la imagen */
+    height: 100px; /* Alto de la imagen */
+    margin: 0 0 -35px 0; /* Margen: superior, derecha, inferior, izquierda */
+    border-radius: 50%; /* Bordes redondeados para hacer la imagen circular */
+}
+
+.header-container h1:hover {
+        background-color: #0d3d00;
+}
+
+.header-container ul { /* Estilo de la lista del header */
+    list-style-type: none; /* Quitar los puntos de la lista */
+    display: flex; /* Mostrar los elementos en fila horizontal */
+    justify-content: center; /* Centrar los elementos */
+    gap: 25px; /* Espaciado entre los elementos */
+    padding: 0; /* Quitar el padding */
+    margin: 0 0 20px 100px; /* Quitar el margin */
+    font-size: 1.3vw; /* Agrandar la letra del 1.4% de la pantalla*/
+}
+
+/* Estilo del submenu cuando no está visible */
+.hover-item1 .submenu1, 
+.hover-item2 .submenu2,
+.hover-item3 .submenu3,
+.hover-item4 .submenu4 {
+    display: none; /* No mostrar el submenu */
+    position: absolute; /* Posición absoluta */
+    background-color: #0d3d00; /* Color de fondo */
+    border: 1px solid #333; /* Borde */
+    padding: 10px; /* Espaciado interno */
+    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+}
+
+/* Estilo del submenu cuando se hace hover */
+.hover-item1:hover .submenu1,
+.hover-item2:hover .submenu2,
+.hover-item3:hover .submenu3,
+.hover-item4:hover .submenu4 {
+    display: block; /* Mostrar el submenu */
+}
+
+/* Estilo de la lista dentro del submenu */
+.hover-item1 .submenu1 ul,
+.hover-item2 .submenu2 ul,
+.hover-item3 .submenu3 ul,
+.hover-item4 .submenu4 ul {
+    list-style: none; /* Quitar los puntos de la lista */
+    padding: 0; /* Quitar el padding */
+    margin: 0; /* Quitar el margin */
+}
+
+/* Estilo de los elementos de la lista dentro del submenu */
+.hover-item1 .submenu1 ul li,
+.hover-item2 .submenu2 ul li,
+.hover-item3 .submenu3 ul li,
+.hover-item4 .submenu4 ul li {
+    display: block; /* Mostrar los elementos en bloque */
+    padding: 5px; /* Espaciado interno */
+    line-height: 1.5;
+    text-align: left;
+}
+
+.header-container ul li:hover,
+.hover-item1 .submenu1 ul li:hover,
+.hover-item2 .submenu2 ul li:hover,
+.hover-item3 .submenu3 ul li:hover,
+.hover-item4 .submenu4 ul li:hover {
+    background-color: #045f1f; /* Cambiar el color de fondo al hacer hover */
+}
+
+.submenu1 ul li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.welcome-message {/* Estilo del mensaje de bienvenida */
+    display: flex; /* Usar flexbox para el diseño */
+    align-items: center; /* Alinear los elementos al centro verticalmente */
+}
+
+.welcome-text {
+    flex: 1;
+    color: #121314; /* Color de letra más suave */
+    padding: 10px; /* Espaciado interno */
+    margin: 90px 45px 30px 45px; /* Espaciado externo, centrado horizontalmente */
+    text-align: center; /* Alinear el texto a la izquierda */
+    animation: scaleText 4.5s ease-out;
+}
+
+.welcome-text .text1,
+.welcome-text .text3 {
+    font-size: 6vw; /* Tamaño de la fuente */
+    font-weight: 800; /* Grosor de la fuente */
+    font-family: 'Montserrat', sans-serif; /* Tipo de letra */
+    color: #961435; /* Color del texto */
+    animation: scaleText 2.5s ease-out; /* Animación de escalado */
+}
+
+.welcome-text .text4,
+.welcome-text .text5 {
+    font-size: 1.5vw; /* Tamaño de la fuente */
+    color: rgb(71, 71, 71); /* Color del texto */
+    font-weight: bold; /* Grosor de la fuente */
+    font-family: 'Lato', sans-serif; /* Tipo de letra */
+    animation: scaleText 1s ease-out; /* Animación de escalado */
+}
+
+.welcome-text .text5 {
+    color: #a7062e; /* Color del texto */
+    animation: moverTexto 2s infinite ease-in-out; /* Animación de movimiento */
+}
+
+@keyframes moverTexto {
+    0% {
+        transform: translateY(0); /* Posición inicial */
+    }
+    50% {
+        transform: translateY(10px); /* Posición intermedia */
+    }
+    100% {
+        transform: translateY(0); /* Posición final */
+    }
+}
+
+@keyframes scaleText {
+    from {
+        transform: scale(1.2); /* Escala inicial */
+        opacity: 0; /* Opacidad inicial */
+    }
+    to {
+        transform: scale(1); /* Escala final */
+        opacity: 1; /* Opacidad final */
+    }
+}
+
+.welcome-text .text2 {
+    font-size: 4.5vw; /* Tamaño de la fuente */
+    color: #797339; /* Color del texto */
+    animation: scaleText 2.5s ease-out; /* Animación de escalado */
+}
+
+.introduction { /* Estilo de la introducción */
+    display: flex; /* Usar flexbox para el diseño */
+    flex-direction: column; /* Alinear los elementos en columna */
+    align-items: center; /* Alinear los elementos al centro horizontalmente */
+    background-color: #ebe0c2; /* Color del fondo */
+    padding: 10px; /* Espaciado interno */
+    margin: 90px auto 60px auto; /* Espaciado externo, centrado horizontalmente */
+    width: 100%; /* Ancho del contenedor */;
+    color: #333333; /* Color de letra*/
+    line-height: 1.6; /* Altura de línea para mejor legibilidad */
+    font-size: 1.4vw; /* Agrandar la letra del 1.4% de la pantalla*/
+    border: 3px solid #c2c2c2; /* Borde */
+}
+
+.introduction h2 { /* Estilo del título de la introducción */
+    color: #961435; /* Color del texto */
+    font-weight: 800; /* Grosor de la fuente */
+    font-family: 'Montserrat', sans-serif; /* Tipo de letra */
+}
+
+.introduction .introduction-text { /* Estilo del texto de introducción */
+    font-weight: bold; /* Grosor de la fuente */
+    font-family: 'Lato', sans-serif; /* Tipo de letra */
+}
+
+.introduction-question { /* Estilo de la pregunta de introducción */
+    order: 1; /* Ordenar este elemento primero */
+    width: 35%; /* Ancho reducido para centrar el texto */
+    text-align: center; /* Centrar el texto */
+    margin-top: -15px;
+}
+
+.introduction-text { /* Estilo del texto de introducción */
+    order: 2; /* Ordenar este elemento segundo */
+    width: 35%; /* Ancho reducido para centrar el texto */
+    text-align: center; /* Centrar el texto */
+}
+
+.introduction-text p:first-of-type { /* Estilo del primer párrafo del texto introductorio */
+    font-weight: bold; /* Letra más gruesa */
+}
+
+.introduction .invitation, .introduction .invitation2 {
+    background-color: white;
+    width: 25%; /* Ancho reducido para centrar el texto */
+    text-align: center; /* Centrar el texto */
+    margin: 20px 0 -190px; /* Espaciado: superior, derecha, inferior */
+    padding-right: -10px;
+    border-radius: 20px;
+    font-family: 'Lato', sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra alrededor del borde */
+}
+
+.introduction .invitation {
+    align-self: flex-start; /* Alinear a la izquierda */
+    margin-right: auto; /* Alinear a la izquierda */
+    border: 8px solid #797339;
+}
+
+.introduction .invitation2 {
+    align-self: flex-end; /* Alinear a la derecha */
+    margin-left: auto; /* Alinear a la derecha */
+    border: 8px solid #961435;
+}
+
+@keyframes elevar {
+    0% {
+        transform: translateY(0px);
+        opacity: 0;
+    }
+    50% {
+        transform: translate(-30px);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-60px);
+    }
+    
+}
+
+.elevado {
+    animation: elevar 5.5s ease-in-out 0.5s forwards;
+}
+
+.introduction .invitation h4, .introduction .invitation2 h4 {
+    border: 3px solid #797333; /* Borde de 3px con color */
+    font-size: 14px; /* Tamaño de la fuente */
+    padding: 5px 15px; /* Espaciado interno: vertical, horizontal */
+    width: auto; /* Ancho automático */
+    display: inline-block; /* Mostrar en línea y permitir tamaño */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el elemento */
+    color: #797339; /* Color del texto */
+    border-radius: 20px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra alrededor del borde */
+}
+
+.introduction .invitation2 h4 {
+    color: #961435; /* Color distinto para .invitation2 h4 */
+    border: 3px solid #961435; /* Borde de 3px con color */
+}
+
+.introduction .invitation h4:hover, .introduction .invitation2 h4:hover {
+    transform: scale(1.3); /* Escalar el elemento al pasar sobre él */
+    background-color: #797333; /* Cambiar el color de fondo al pasar sobre el elemento */
+    color: white; /* Cambiar el color del texto al pasar sobre el elemento */
+}
+
+.introduction .invitation2 h4:hover {
+    background-color: #961435; /* Cambiar el color de fondo al pasar sobre el elemento */
+}
+
+.invitation a, .invitation2 a { /*Estilos para el enlace hacia la seccion emprendimiento del boton 2*/
+    text-decoration: none; /*Quitar el subrayado*/
+    color: inherit; /*Conservar su color*/
+}
+
+.stories,
+.Benefits { /* Estilo de los beneficios */
+    display: flex; /* Usar flexbox para el diseño */
+    align-items: center; /* Alinear los elementos al centro horizontalmente */
+    flex-direction: column;
+    background-color: #961435; /* Color del fondo */
+    padding: 10px; /* Espaciado interno */
+    margin: 90px 45px 60px 0; /* Espaciado externo, centrado horizontalmente */
+    width: 98.6%; /* Ancho del contenedor */
+    color: #ebe0c2; /* Color de letra */
+    line-height: 1.6; /* Altura de línea para mejor legibilidad */
+    font-size: 1.4vw; /* Agrandar la letra del 1.4% de la pantalla */
+}
+
+.stories .stories1,
+.Benefits .Benefits1 {
+    flex: 3;
+    background-color: #ebe0c2; /* Color de fondo */
+    color: #333; /* Color de la letra */
+    width: 60%; /* Ancho del contenedor */
+    height: 10%;
+    border-radius: 20px; /* Bordes redondeados */
+    margin-left: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra alrededor del borde */
+    font-family: 'Montserrat', sans-serif; /* Tipo de letra */
+    font-weight: bold; /* Letra en negrita */
+    display: flex; /* Usar flexbox para el diseño */
+    align-items: center; /* Alinear los elementos al centro verticalmente */
+    padding-left: 30px; /* Ajustar espacio a la izquierda para la imagen */
+    margin-right: 600px; /* Eliminar margen negativo */
+}
+
+.Benefits .Benefits1 h4 {
+    margin-top: -50px;
+}
+
+.stories .stories1 p,
+.Benefits .Benefits1 p {
+    font-size: 1vw; /* Tamaño de la fuente más pequeño */
+    margin-left: 40px; /*Margen izquierdo de 40px*/
+}
+
+.stories .stories1 img,
+.Benefits .Benefits1 img { /* Estilos para la imagen a la izquierda*/
+    width: 35%; /*Ancho de 35%*/
+    height: auto; /*altura atomatica*/
+    margin-left: auto; /* Empujar la imagen a la derecha */
+    margin-right: 25px; /* Ajustar margen para posicionar la imagen */
+    border: 50px #797339; /* Borde de color*/
+    border-radius: 20px; /*Bordes redondeados*/
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); /* Sombra alrededor del borde */
+}
+
+.stories h2
+.Benefits h2 { /* Estilo del título de los beneficios */
+    flex: 1; /*Primer elemento*/
+    text-align: center; /* Centrar el texto */
+    font-family: 'Playfair Display', serif; /* Fuente legible */
+    margin-bottom: 10px; /*Margen inferior de 10px*/
+    margin-right: 300px;/*Margen derecho de 300px*/
+}
+
+.storiesBotton img,
+.Benefits-image img { /*Estilos para el boton*/
+    flex: 2; /*Segundo elemento*/
+    width: 4%; /*Ancho de 4%*/
+    height: auto; /*altura automatica*/
+    margin-left: 970px; /*Margen izquierdo de 970px*/
+    margin-bottom: -150px; /*Margen inferior de -150px*/
+}
+
+.storiesBotton img:hover,
+.Benefits-image img:hover { /*Estilos del boton cuando se hace hover*/
+    cursor: pointer; /*Estilo del cursor*/
+    transform: scale(1.4); /*Escala de 1.4*/
+}
+
+.storiesIndicador img,
+.Benefits-image2 img { /*Estilos del indicador de pagina*/
+    flex: 4; /*Cuarto elemento*/
+    width: 7%; /*Ancho de 7%*/
+    height: auto; /*Altura automatica*/
+    margin-left: 300px; /*Margen izquierdo de 300px*/
+    margin-top: 20px; /*Margen superior de 20px*/
+}
+
+.Results { /*Estilos para la clase resultados*/
+    display: flex; /*Usar flexbox*/
+    text-align: center; /*Alinear al centro*/
+    flex-direction: column; /*Elementos en columna*/
+}
+
+.Results h2 { 
+    flex: 1; /*Primer elemento*/
+    color: #797333; /*Color de la tetra*/
+    font-family: 'Montserrat', sans-serif; /* Tipo de letra */
+    font-weight: bold;
+}
+
+.Results img { /*Estilos generales para las imagenes*/
+    margin: 0 20px; /*Margenes de 20px a derecha e izquierda*/
+    border-radius: 50%; /*Bordes redondos*/
+}
+
+.Results .image1 img { /*Imagen1 como segundo elemento y alinearla a la izquierda*/
+    float: 2;
+    float: left;
+    border: 16px solid #797333;
+}
+
+.Results .image2 img { /*imagen2 como tercer elemento y alinearla a la derecha*/
+    flex: 3;
+    float: right;
+    margin-top: -300px; /*Margen -300px para ajustarla*/
+    border: 16px solid #961435;
+}
+
+.Results .image3 img { 
+    margin-top: -300px; /*margen top de -300px para ajustarla*/
+    border: 16px solid #045f1f;
+}
+.basic-text .text1,
+.basic-text .text2{
+    font-size: 4vw; /* Tamaño de la fuente */
+    font-weight: 800; /* Grosor de la fuente */
+    font-family: 'Montserrat', sans-serif; /* Tipo de letra */
+    color: #961435; /* Color del texto */
+    animation: scaleText 2.5s ease-out; /* Animación de escalado */
+}
+
+footer { /* Estilo del footer */
+    background-color: #0d3d00; /* Color de fondo */
+    color: #fff; /* Color de la letra */
+    padding: 20px 0; /* Espaciado */
+    text-align: center; /* Centrar el texto */
+}
+
+.stories .stories1 { /*Estilos extras para stories1*/
+    margin-right: 300px; /*Margen derecho de 300px para acomodar mejor */
+}
+
+.storiesBotton { /*Estilos extras para .storiesBotton*/
+    padding-left: 3%; /*Margen interior de 3% para acomodarlo mejor*/
+}
+
+.stories h3 { /*ERstilos extras de h3*/
+    margin: 0 -300px -10px 0; /*Margen 0 -300px -10px 0 para acomodarlo mejor*/
+}
