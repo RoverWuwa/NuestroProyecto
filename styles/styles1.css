@@ -286,13 +286,17 @@ body {
     display: flex; /* Usar flexbox para el diseño */
     align-items: center; /* Alinear los elementos al centro horizontalmente */
     flex-direction: column;
-    background-color: #961435; /* Color del fondo */
     padding: 10px; /* Espaciado interno */
     margin: 90px 45px 60px 0; /* Espaciado externo, centrado horizontalmente */
     width: 98.6%; /* Ancho del contenedor */
     color: #ebe0c2; /* Color de letra */
     line-height: 1.6; /* Altura de línea para mejor legibilidad */
     font-size: 1.4vw; /* Agrandar la letra del 1.4% de la pantalla */
+}
+
+.stories,
+.Benefits {
+    background-color: #961435; /* Color del fondo */
 }
 
 .stories .stories1,
@@ -421,6 +425,23 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    position: relative;
+}
+
+.Finanzas::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(168, 16, 16);
+    z-index: 1;
+}
+
+.Finanzas h2 {
+    position: relative;
+    z-index: 2;
 }
 
 footer { /* Estilo del footer */
