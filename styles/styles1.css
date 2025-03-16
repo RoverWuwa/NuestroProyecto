@@ -280,6 +280,7 @@ body {
     color: inherit; /*Conservar su color*/
 }
 
+.Finanzas,
 .stories,
 .Benefits { /* Estilo de los beneficios */
     display: flex; /* Usar flexbox para el diseño */
@@ -412,6 +413,14 @@ body {
 
 .stories h3 { /*ERstilos extras de h3*/
     margin: 0 -300px -10px 0; /*Margen 0 -300px -10px 0 para acomodarlo mejor*/
+}
+
+.Finanzas {
+    margin-top: 180px;
+    background-image: url('images/santuario.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 footer { /* Estilo del footer */
