@@ -99,6 +99,8 @@ body {
     background-color: #045f1f; /* Cambiar el color de fondo al hacer hover */
 }
 
+.header-container h1 a,
+.submenu2 ul li a,
 .submenu1 ul li a {
     text-decoration: none;
     color: inherit;
