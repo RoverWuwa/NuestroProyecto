@@ -27,6 +27,12 @@ body {
     text-align: center;
     padding: 20px;
 }
+/* styles.css */
+
+/* ======= Estilo para resaltar coincidencias en la búsqueda ======= */
+.highlight {
+    background-color: yellow; /* Establece un fondo amarillo para resaltar el texto */
+}
 
 .header-container img { /* Estilo de la imagen dentro del header */
     width: 100px; /* Ancho de la imagen */
@@ -100,10 +106,11 @@ body {
 }
 
 .header-container h1 a,
+.submenu3 ul li a,
 .submenu2 ul li a,
 .submenu1 ul li a {
-    text-decoration: none;
-    color: inherit;
+    text-decoration: none; /*quitar el subrayado*/
+    color: inherit; /*color de letra inherente*/
 }
 
 .welcome-message {/* Estilo del mensaje de bienvenida */
@@ -280,6 +287,7 @@ body {
     color: inherit; /*Conservar su color*/
 }
 
+.Emprendimiento,
 .Finanzas,
 .stories,
 .Benefits { /* Estilo de los beneficios */
@@ -419,6 +427,7 @@ body {
     margin: 0 -300px -10px 0; /*Margen 0 -300px -10px 0 para acomodarlo mejor*/
 }
 
+.Emprendimiento,
 .Finanzas { /*Estilos para la clase finanzas*/
     margin-top: 180px; /*Margen superior para que este debaje del header-container*/
     background-image: url('images/santuario.jpg'); /*imagen de fondo del elemento*/
@@ -427,8 +436,14 @@ body {
     background-position: center; /*centrar la imagen*/
     position: relative;
     min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 24px;
 }
 
+.Emprendimiento::before,
 .Finanzas::before { /*crea un pseudocodigo para el opacado*/
     content: '';
     position: absolute;/*Posicion en todo el elemento*/
@@ -440,13 +455,13 @@ body {
     z-index: 1;/*asegura estar encima de otro elemento*/
 }
 
+.Emprendimiento h2,
 .Finanzas h2 {
-    flex: 1;
     position: relative; /*Posicion relativa*/
-    z-index: 2;/*asegura que este encima de todos los demas elementos*/
-    margin-left: -20px;
-    line-height: 1.6; /* Altura de línea para mejor legibilidad */
-    font-size: 1.4vw; /* Agrandar la letra del 1.4% de la pantalla */
+    z-index: 2;/*asegura que este encima de to  s los demas elementos*/
+    text-align: left; /* Altura de línea para mejor legibilidad */ 
+    line-height: 1.6%; /* Agrandar la letra del 1.4% de la pantalla */
+    font-size: 8vw;
 }
 
 footer { /* Estilo del footer */
