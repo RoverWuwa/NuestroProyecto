@@ -460,8 +460,9 @@ body {
     position: relative; /*Posicion relativa*/
     z-index: 2;/*asegura que este encima de to  s los demas elementos*/
     text-align: left; /* Altura de línea para mejor legibilidad */ 
-    line-height: 1.6%; /* Agrandar la letra del 1.4% de la pantalla */
-    font-size: 6vw; /*Tamaño de la letra*/
+    line-height: 1.4%; /* Agrandar la letra del 1.4% de la pantalla */
+    font-size: 3vw; /*Tamaño de la letra*/
+    font-family:'Montserrat', sans-serif; /*tipo de letra*/
 }
 
 footer { /* Estilo del footer */
