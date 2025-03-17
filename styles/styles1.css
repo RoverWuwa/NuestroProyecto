@@ -419,29 +419,34 @@ body {
     margin: 0 -300px -10px 0; /*Margen 0 -300px -10px 0 para acomodarlo mejor*/
 }
 
-.Finanzas {
-    margin-top: 180px;
-    background-image: url('images/santuario.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+.Finanzas { /*Estilos para la clase finanzas*/
+    margin-top: 180px; /*Margen superior para que este debaje del header-container*/
+    background-image: url('images/santuario.jpg'); /*imagen de fondo del elemento*/
+    background-size: cover; /*que la imagen cubra todo*/
+    background-repeat: no-repeat; /*La imagen no debe repetirse*/
+    background-position: center; /*centrar la imagen*/
     position: relative;
+    min-height: 400px;
 }
 
-.Finanzas::before {
+.Finanzas::before { /*crea un pseudocodigo para el opacado*/
     content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(168, 16, 16);
-    z-index: 1;
+    position: absolute;/*Posicion en todo el elemento*/
+    top: 0;/*coloca en la parte superior del contenedor*/
+    left: 0;/*coloca en la parte izquierda del contenedor*/
+    width: 100%;/*establece el ancho del contenedor*/
+    height: 100%;/*establece la altura del contenedor*/
+    background-color: rgba(168, 16, 16, 0.5); /* Establece un color de fondo rojo con un 50% de opacidad, permitiendo que el fondo del contenedor sea visible a través de él.*/
+    z-index: 1;/*asegura estar encima de otro elemento*/
 }
 
 .Finanzas h2 {
-    position: relative;
-    z-index: 2;
+    flex: 1;
+    position: relative; /*Posicion relativa*/
+    z-index: 2;/*asegura que este encima de todos los demas elementos*/
+    margin-left: -20px;
+    line-height: 1.6; /* Altura de línea para mejor legibilidad */
+    font-size: 1.4vw; /* Agrandar la letra del 1.4% de la pantalla */
 }
 
 footer { /* Estilo del footer */
