@@ -34,6 +34,11 @@ body {
     background-color: yellow; /* Establece un fondo amarillo para resaltar el texto */
 }
 
+.header-container .searcher {
+    float: right;
+    margin-top: 40px;
+}
+
 .header-container img { /* Estilo de la imagen dentro del header */
     width: 100px; /* Ancho de la imagen */
     height: 100px; /* Alto de la imagen */
@@ -435,7 +440,7 @@ body {
     background-repeat: no-repeat; /*La imagen no debe repetirse*/
     background-position: center; /*centrar la imagen*/
     position: relative;
-    min-height: 400px;
+    min-height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -463,6 +468,23 @@ body {
     line-height: 1.4%; /* Agrandar la letra del 1.4% de la pantalla */
     font-size: 3vw; /*Tamaño de la letra*/
     font-family:'Montserrat', sans-serif; /*tipo de letra*/
+}
+
+.Emprendimiento img,
+.Finanzas img {
+    position: relative;
+    z-index: 3;
+    display: block;
+    margin: 0 auto;
+    margin-top: -100px;
+}
+
+.Finanzas h1,
+.Emprendimiento h1{
+    font-size: 7vw;
+    margin-left: 140px;
+    margin-top: -220px;
+    z-index: 2;
 }
 
 footer { /* Estilo del footer */
